@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wdth,wght@75..100,100..700&family=Orbitron:wght@400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: white;
+}
+body {
+  overflow-x: hidden;
+  scrollbar-width: 0px;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+}

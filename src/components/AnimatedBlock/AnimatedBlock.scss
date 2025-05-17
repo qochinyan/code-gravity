@@ -1,0 +1,51 @@
+@use "../../styles/vars.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+.animated-block__container {
+  height: 100vh;
+  width: 100%;
+  @include flex(column, flex-start, center, 38px);
+  position: relative;
+  .animated-block__header {
+    width: 622px;
+    height: 134px;
+    @include flex(row, center, center, 49px);
+    position: relative;
+    .edge-cube {
+      position: absolute;
+      background-color: $turquoise;
+      width: 14px;
+      height: 14px;
+    }
+    .cube-lt {
+      left: 0;
+      top: 0;
+    }
+    .cube-lb {
+      left: 0;
+      bottom: 0;
+    }
+    .cube-rt {
+      right: 0;
+      top: 0;
+    }
+    .cube-rb {
+      right: 0;
+      bottom: 0;
+    }
+    .header__heading {
+      font-size: 24px;
+      font-family: $orbitron-font;
+      width: 219px;
+      height: 62px;
+      font-weight: bold;
+    }
+    .header__description {
+      font-size: 16px;
+      font-family: $ibm-font;
+      font-weight: 400;
+      width: 285px;
+      line-height: 22px;
+    }
+  }
+}

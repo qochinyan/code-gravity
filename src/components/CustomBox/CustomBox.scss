@@ -1,0 +1,10 @@
+@use "../../styles/vars.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+.custom-box__container{
+    background-color: $background;
+    border: 2px solid $devider-border-bg;
+    border-radius: 4px;
+    @include flex(column,center,space-between,0px);
+    padding: 20px;
+}

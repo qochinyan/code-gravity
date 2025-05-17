@@ -1,0 +1,11 @@
+@use "./styles/vars.scss" as *;
+@use "./styles/mixins.scss" as *;
+
+.app__container {
+  background-color: $background;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0 40px;
+  @include flex(column, center, center, 0px);
+  overflow-x: hidden;
+}

@@ -1,0 +1,287 @@
+@use "../../styles/vars.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+.footer__container {
+  @include flex(column, center, center, 20px);
+  width: 100%;
+  min-height: 100vh;
+  color: $small-text-color;
+  padding: 40px 0;
+  .footer-links__container {
+    @include flex(row, center, space-between, 26px);
+    width: 100%;
+    height: 311px;
+    .footer-techs {
+      height: 100%;
+      min-width: 400px;
+      @include flex(column, center, center, 10px);
+      padding: 0 20px 20px 20px;
+      .footer-techs__heading {
+        color: $small-text-color !important;
+        font-size: 54px;
+        font-weight: 300;
+        width: 370px;
+      }
+      .techs__content {
+        height: 209px;
+        width: 100%;
+        @include flex(row, flex-start, space-between, 0px);
+        span {
+          height: 100%;
+          p {
+            line-height: 150%;
+            color: $small-text-color;
+            font-size: 16px;
+            font-weight: 300;
+          }
+        }
+        .techs-left {
+          @include flex(column, flex-start, space-between, 0px);
+          max-width: 153px;
+        }
+        .techs-right {
+          @include flex(column, flex-end, space-between, 0px);
+          max-width: 104px;
+        }
+      }
+    }
+    .footer-services {
+      width: 100%;
+      height: 100%;
+      padding: 10px 20px 20px 20px;
+      @include flex(column, center, space-between, 38px);
+      .services__content {
+        @include flex(row, center, space-between, 2vw);
+        row-gap: 20px;
+        flex-wrap: wrap;
+        .service__item {
+          width: 230px;
+          font-size: 16px;
+          font-weight: 300;
+          color: $small-text-color;
+        }
+      }
+      .services__heading {
+        width: 100%;
+        .heading__text {
+          line-height: 50px;
+          font-size: 48px;
+          font-weight: 300;
+          color: $small-text-color !important;
+          @include flex(row, center, center, 0px);
+          .green {
+            color: $devider-border-bg;
+            user-select: none;
+          }
+          position: relative;
+          width: 100%;
+          height: 100%;
+          .heading__line {
+            background-color: $devider-border-bg;
+            width: calc(50% - 105px);
+            height: 3px;
+            position: absolute;
+            &--left {
+              left: 0px;
+              top: 50%;
+              transform: translate(0, -50%);
+            }
+            &--rigth {
+              right: 0px;
+              top: 50%;
+              transform: translate(0, -50%);
+            }
+          }
+          .text__content {
+            padding: 0 10px;
+            color: $small-text-color;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    .footer-social__box {
+      user-select: none;
+      @include flex(column, center, center, 10px);
+      width: 350px;
+      height: 100%;
+      .footer-accounts {
+        width: 100%;
+        height: 164px;
+        @include flex(row, center, center, 22px);
+        .custom-box__container {
+          cursor: pointer;
+          width: 164px;
+          height: 100%;
+          @include flex(row, center, center, 0px);
+        }
+      }
+      .footer-terms {
+        height: 64px;
+        width: 100%;
+        @include flex(row, center, center, 22px);
+        .custom-box__container {
+          width: 100%;
+          height: 100%;
+          @include flex(row, center, center, 0px);
+          font-size: 14px;
+          padding: 0;
+          a {
+            text-align: center;
+            line-height: 64px;
+            width: 100%;
+            height: 100%;
+            color: $small-text-color !important;
+            font-weight: 300;
+          }
+        }
+      }
+      .footer-year {
+        color: $small-text-color !important;
+        width: 100%;
+        height: 62px;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: $orbitron-font;
+      }
+    }
+  }
+  .footer-top {
+    width: 100%;
+    padding: 20px;
+    @include flex(column, center, center, 0);
+    .footer-form__container {
+      margin-top: 46px;
+      width: 100%;
+      .footer-form {
+        @include flex(column, flex-start, center, 30px);
+        width: 100%;
+        .submit-button {
+          background: url("../../assets/ButtonPrimary.svg") no-repeat center center;
+          background-size: cover;
+          color: white;
+          font-family: monospace;
+          border: none;
+          padding: 1rem 2rem;
+          width: 100%;
+          height: 68px;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        input[type="text"] {
+          height: 37px;
+          background: transparent;
+          border: 2px solid white;
+          font-size: 16px;
+          font-weight: 300;
+          outline: none;
+          text-align: center;
+          border-top: none;
+          width: 100%;
+          &::placeholder {
+            color: $placeholder-color;
+          }
+        }
+        .information-inputs {
+          width: 100%;
+          @include flex(row, center, space-between, 50.5px);
+        }
+        .agreement-checkbox--label {
+          @include flex(row, center, center, 5px);
+          cursor: pointer;
+          user-select: none;
+          font-size: 14px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          span {
+            color: $small-text-color !important;
+          }
+          input {
+            display: none;
+          }
+          .checkbox-display {
+            width: 39px;
+            height: 25px;
+            @include flex(row, center, center, 0px);
+            margin-left: -3px;
+            color: $small-text-color !important;
+          }
+          .checkbox-display::before {
+            content: "[   ]";
+            font-family: monospace;
+            font-size: 18px;
+            text-align: center;
+            letter-spacing: 3px;
+            line-height: 100%;
+          }
+          input:checked + .checkbox-display::before {
+            letter-spacing: 0.8px;
+            line-height: 83%;
+            content: "[✔]";
+            height: 13px;
+            margin-left: -2px;
+          }
+        }
+      }
+    }
+    .services {
+      &__container {
+        width: 100%;
+        @include flex(column, flex-start, center, 10px);
+        .services__content {
+          width: 100%;
+          @include flex(row, center, center, 26px);
+          flex-wrap: wrap;
+          row-gap: 20px;
+          .service__box {
+            cursor: pointer;
+            user-select: none;
+            color: $small-text-color;
+            width: 202px;
+            height: 48px;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 110%;
+            border: 2px solid $turquoise;
+            padding: 10px 23px;
+            @include flex(row, center, center, 0px);
+            text-align: center;
+            &--active,
+            &:hover {
+              background-color: #002010;
+            }
+          }
+        }
+        .services__description {
+          font-size: 16px;
+          font-family: $ibm-font;
+          font-weight: 300;
+          line-height: 150%;
+          color: $small-text-color;
+        }
+      }
+    }
+    .footer-top__heading {
+      width: 100%;
+      span {
+        text-transform: uppercase;
+        line-height: 110%;
+        font-family: $orbitron-font;
+        color: white;
+        font-size: 120px;
+        height: 132px;
+      }
+      @include flex(row, center, space-between, 0px);
+      width: 100%;
+      .cube-devider {
+        width: 18px;
+        height: 18px;
+        background-color: $devider-border-bg;
+      }
+    }
+  }
+}
